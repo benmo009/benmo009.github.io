@@ -1,24 +1,13 @@
 ---
-const pageTitle = "About Me";
+import BaseLayout from "../layouts/base_layout.astro";
+import {identity} from "../data/identity.js"
+
+const pageTitle = "benmo.dev - About Me";
 ---
+<BaseLayout pageTitle={pageTitle}>
+	<p>Hello! My name is {identity.firstName}. I'm an engineer currently living in {identity.city}, {identity.state}. I made this website to keep track of (and show off) my various projects.</p>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<h1>benmo.dev</h1>
+	<p>Maybe this will also help me stay on track with completing them too...</p>
 
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/projects/">Projects</a>
-
-        <h2>{pageTitle}</h2>
-
-        <p>My name is Ben. More to come later.</p>
-	</body>
-</html>
+	<p>Outside of engineering and writing code, I enjoy playing Super Smash Bros. (specifically Melee, the one for the Gamecube), power lifting, and cooking.</p>
+</BaseLayout>
