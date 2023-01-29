@@ -1,4 +1,4 @@
-# [benmo.dev](https://www.benmo.dev)
+# benmo.dev
 
 My personal website, check it out [here](https://www.benmo.dev)! It is built using [Astro](https://astro.build)
 
