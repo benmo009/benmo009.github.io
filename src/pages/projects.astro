@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/base_layout.astro";
+import ProjectList from "../components/project_list.astro";
+
+const pageTitle = "benmo.dev - Projects";
+const allProjects = await Astro.glob("../pages/projects/*.md");
+---
+<BaseLayout pageTitle={pageTitle}>
+	<p>These are some things I'm working on:</p>
+
+	<ProjectList projects={allProjects}/>
+</BaseLayout>

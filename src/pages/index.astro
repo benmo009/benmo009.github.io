@@ -1,15 +1,8 @@
 ---
----
+import BaseLayout from "../layouts/base_layout.astro";
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>benmo.dev</title>
-	</head>
-	<body>
-		<h1>benmo.dev</h1>
-	</body>
-</html>
+const pageTitle = "benmo.dev";
+---
+<BaseLayout pageTitle={pageTitle}>
+	<img src="/assets/duck.jpg" width="50%"/>
+</BaseLayout>

@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/base_layout.astro";
+import Social from "../components/social.astro";
+
+const pageTitle = "benmo.dev - Contact";
+---
+<BaseLayout pageTitle={pageTitle}>
+	<ul>
+        <li><a href="mailto:benmo009@gmail.com">Email</a></li>
+        <li><Social platform="Github" username="benmo009"/></li>
+        <li><Social platform="LinkedIn" username="in/benjamin-mo"/></li>
+    </ul>
+</BaseLayout>
