@@ -20,7 +20,7 @@ I then sanded the frames and finished them with shellac. The color came out pret
 <img src="/assets/desks/finish_1.jpg" width="40%"/>
 <img src="/assets/desks/finish_2.jpg" width="40%"/>
 
-The frame isn't entirely square or level, but for a first woodworking project, I'd say its pretty good! The only downsie is that they look like science lab benches...
+The frames aren't entirely square or level, but for a first woodworking project, I'd say they're pretty good! The only downside is that they look like science lab benches...
 
 <img src="/assets/desks/complete_1.jpg" width="40%"/>
 <img src="/assets/desks/complete_2.jpg" width="40%"/>
