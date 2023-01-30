@@ -1,12 +1,14 @@
 ---
 import BaseLayout from "../layouts/base_layout.astro";
 import Social from "../components/social.astro";
+import { color_theme } from "../data/color_theme";
 
 const pageTitle = "benmo.dev - Contact";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<ul>
-        <li><a href="mailto:benmo009@gmail.com">Email</a></li>
+    <p class="p-3">Contact me!</p>
+	<ul class="px-10">
+        <li><a class={color_theme.hyper_links} href="mailto:benmo009@gmail.com">Email</a></li>
         <li><Social platform="Github" username="benmo009"/></li>
         <li><Social platform="LinkedIn" username="in/benjamin-mo"/></li>
     </ul>

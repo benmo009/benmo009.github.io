@@ -5,9 +5,19 @@ import {identity} from "../data/identity.js"
 const pageTitle = "benmo.dev - About Me";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<p>Hello! My name is {identity.firstName}. I'm an engineer currently living in {identity.city}, {identity.state}. I made this website to keep track of (and show off) my various projects.</p>
+	<p class="px-3 pt-3 pb-1">Hello! My name is {identity.firstName}. I'm an engineer currently living in {identity.city}, {identity.state}. I made this website to keep track of (and show off) my various projects.</p>
 
-	<p>Maybe this will also help me stay on track with completing them too...</p>
+	<p class="px-3 pb-3 text-xs text-gray-600">And maybe also help me stay on track with completing them too...</p>
 
-	<p>Outside of engineering and writing code, I enjoy playing Super Smash Bros. (specifically Melee, the one for the Gamecube), power lifting, and cooking.</p>
+	<p class="p-3">Outside of engineering and writing code, I enjoy playing Super Smash Bros. (specifically Melee, the one for the Gamecube), power lifting, and cooking.</p>
+
+	<div class="flex justify-center p-3">
+		<img class="flex-initial" src="/assets/melee.gif">
+	</div>
+
+	<p class="px-3 py-3">And here's a picture of the greatest bowling game of my life. (Sorry Jonathan)</p>
+
+	<div class="flex justify-center p-3">
+		<img class="flex-initial" src="/assets/bowling.jpg">
+	</div>
 </BaseLayout>
