@@ -4,6 +4,8 @@ import BaseLayout from "./base_layout.astro";
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <h2>{frontmatter.title}</h2>
-    <slot />
+    <h2 class="font-header font-semibold text-2xl p-3">{frontmatter.title}</h2>
+    <div class="p-3">
+        <slot />
+    </div>
 </BaseLayout>
