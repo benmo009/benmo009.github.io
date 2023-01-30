@@ -1,7 +1,9 @@
 ---
+import {color_theme} from "../data/color_theme.js";
+
 const currentYear = new Date().getFullYear();
 ---
 
-<footer>
-    <p>Written by Ben Mo with <a href="https://astro.build">Astro</a>, { currentYear }</p>
+<footer class="flex-1 basis-full text-center py-5">
+    <p>Written by Ben Mo with <a class={color_theme.hyper_links} href="https://astro.build">Astro</a>, { currentYear }</p>
 </footer>

@@ -1,8 +1,4 @@
 ---
 const {url, title, date} = Astro.props;
 ---
-<tr>
-    <td>{ date }</td>
-    <td>{ title }</td>
-    <td><a href={ url }>Link</a></td>
-</tr>
+<li><a href={ url }><span class='text-sky-500 font-bold'>{ title }</span> - Last updated { date }</a></li>
