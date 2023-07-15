@@ -1,9 +1,0 @@
----
-import ProjectLink from "./project_link.astro";
-
-const { projects } = Astro.props;
-projects.sort((a, b) => Date.parse(b.frontmatter.date_updated) - Date.parse(a.frontmatter.date_updated));
----
-<ul class="px-10">
-    {projects.map((project) => <ProjectLink url={project.url} title={project.frontmatter.title} date={project.frontmatter.date_updated}/>)}
-</ul>
