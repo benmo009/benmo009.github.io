@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}benmo.dev{% endblock title %}</title>
+    {% block stylesheet %}<link rel="stylesheet" href="/static/css/main.css">{% endblock stylesheet %}
+    {% block head_scripts %}{% endblock head_scripts %}
+</head>
+
+<body>
+    {% block body %}
+        {% block header %}{% endblock header %}
+
+        {% block navigation %}
+            {% include 'components/navigation.html' %}
+        {% endblock navigation %}
+
+        {% block content %}{% endblock content %}
+
+        {% block footer %}
+            <p>2023</p>
+        {% endblock footer %}
+
+        {% block scripts %}{% endblock scripts %}
+    {% endblock body %}
+</body>
+</html>
