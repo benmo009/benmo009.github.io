@@ -1,9 +1,8 @@
 # benmo.dev
 
-My personal website, check it out [here](https://www.benmo.dev)! It is built using [Astro](https://astro.build)
+My personal website, check it out [here](https://www.benmo.dev)!
 
-Run the dev server with the command
+## Building the site
 
-```
-npm run dev
-```
+Jinja templates are used to build the website's HTML files. Build the site by
+using build.py.
