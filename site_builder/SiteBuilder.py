@@ -10,10 +10,10 @@ class SiteBuilder:
     def __init__(self, args: argparse.Namespace, logger: logging.Logger):
         self._args = args
         self._logger = logger
-        self._template_path = args.template_path
-        self._output_path = args.output_path
-        self._skip_paths = set(args.skip_paths)
-        self._copy_paths = args.copy_paths
+        self._template_path = os.path.abspath(args.template_path)
+        self._output_path = os.path.abspath(args.output_path)
+        self._skip_paths = set([os.path.abspath(p) for p in args.skip_paths])
+        self._copy_paths = [os.path.abspath(p) for p in args.copy_paths]
 
         self.check_template_path()
         self.check_output_path()
@@ -42,7 +42,7 @@ class SiteBuilder:
 
     def check_template_path(self):
         """ Checks that a valid template path was given.
-        
+
         Raises an Exception if template path does not exist or if it is not a directory.
         """
         if not os.path.exists(self.template_path):
@@ -52,12 +52,12 @@ class SiteBuilder:
 
     def check_output_path(self):
         """ Checks that a valid site path was given, removing any pre-existing files.
-        
+
         Raises an Exception if output path is a file.
         """
         if os.path.isfile(self.output_path):
             raise Exception(f"Output path: {self.output_path} already exists and is a file. Either rename it or change site path.")
-        
+
         if os.path.isdir(self.output_path):
             count = utils.recurse_path_remove(self.output_path)
             self.logger.info(f"Deleted {count} pre-existing files in output path: {self.output_path}")
@@ -90,7 +90,8 @@ class SiteBuilder:
 
     def copy_necessary_files(self):
         for path in self.copy_paths:
-            dest = shutil.copytree(path, os.path.join(self.output_path, path))
+            out_path = os.path.join(self.output_path, os.path.basename(path))
+            dest = shutil.copytree(path, out_path)
             self.logger.info(f"Copied {path} to {dest}")
 
     def build_site(self):
