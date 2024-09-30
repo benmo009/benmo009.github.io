@@ -4,8 +4,8 @@ import logging
 
 def parse_arguments():
     """ Parse command line arguments.
-     
-    Returns: args namespace 
+
+    Returns: args namespace
     """
     parser = argparse.ArgumentParser(
         prog = "build_site",
@@ -28,7 +28,7 @@ def init_log(name: str=None, level: int=logging.INFO):
     handler = logging.StreamHandler()
     handler.setLevel(level)
 
-    formatter = logging.Formatter("[%(asctime)s %(levelname)s (%(funcName)s)] %(message)s")
+    formatter = logging.Formatter("%(asctime)s %(levelname)s: %(message)s [%(filename)s %(funcName)s()]")
 
     handler.setFormatter(formatter)
     logger.addHandler(handler)
@@ -51,7 +51,7 @@ def recurse_path_search(path: str, files: list, skip_dirs: set=set()) -> None:
 
 def recurse_path_remove(path: str) -> int:
     """ Recursively travel through path to delete all files and directories.
-    
+
     Returns: number of files removed.
     """
     count = 0
@@ -63,6 +63,6 @@ def recurse_path_remove(path: str) -> int:
             logging.debug(f"Removed file: {full_path}")
         elif os.path.isdir(full_path):
             count += recurse_path_remove(full_path)
-    
+
     os.rmdir(path)
     return count
