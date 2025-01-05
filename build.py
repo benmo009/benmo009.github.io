@@ -14,7 +14,7 @@ def main():
         builder = SiteBuilder(args, logger)
         builder.build_site()
     except Exception as exp:
-        logger.error(f"{exp.__class__.__name__}: {exp}")
+        logger.exception(f"Error building site.")
 
 if __name__ == "__main__":
     main()
