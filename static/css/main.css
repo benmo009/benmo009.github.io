@@ -15,9 +15,14 @@ footer {
 }
 
 .list {
-    margin: auto;
-    width: 25%;
+    margin-left: 40%;
     padding: 10px;
     text-align: left;
 }
 
+img {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}

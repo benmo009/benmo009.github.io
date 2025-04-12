@@ -1,0 +1,28 @@
+{% extends "components/base.html" %} {% block header %}
+<h1>Omnidirectional Robot</h1>
+{% endblock header %} {% block content %}
+<p>
+    I am working on building a mobile robot. It will have three omnidirectional
+    wheels to enable it to drive in any direction, and two USB cameras for
+    binocular computer vision. The plan is to use this robot to learn more about
+    computer vision, localization, and mapping.
+</p>
+
+<hr />
+
+<h3>First Revision</h3>
+
+<p>
+    My first version consisted of a Raspberry Pi 4 communicating with a
+    Raspberry Pi Pico through UART, which in turn controled the speed of three
+    brushed DC motors using the
+    <a href="https://www.cytron.io/p-10amp-5v-30v-dc-motor-driver"
+        >Cytron MD10C motor drivers</a
+    >
+    in sign-magnitude PWM mode. I designed a PCB to help with routing the
+    connections between the Pico, motor drivers, motors and encoders. More
+    details on that can be found <a href="pico-board.html">here</a>.
+</p>
+
+<img src="/assets/robot-rev1-cad.png" alt="3D CAD model of the robot" />
+{% endblock content %}
