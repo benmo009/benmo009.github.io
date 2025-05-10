@@ -5,14 +5,14 @@ body {
     text-align: center;
 }
 
-footer {
+/* footer {
     margin: auto;
     width: 50%;
     padding: 10px;
     text-align: center;
     position: fixed;
     bottom: 0px;
-}
+} */
 
 .list {
     margin-left: 40%;
@@ -20,9 +20,16 @@ footer {
     text-align: left;
 }
 
+main article {
+    text-align: start;
+}
+
+.centered {
+    text-align: center;
+}
+
 img {
     margin: auto;
     width: 30%;
     padding: 10px;
-    text-align: center;
 }
