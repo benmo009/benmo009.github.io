@@ -1,0 +1,34 @@
+
+body {
+    /* Variables */
+    --borderSize: 0px;
+    --paddingSize: 20px;
+
+    /* Flexbox stuff */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+
+    /* Misc. properties */
+    margin: auto;
+    padding: var(--paddingSize);
+    border: var(--borderSize) solid black;
+
+    min-width: 1000px;
+    width: 50%;
+    min-height: calc(100dvh - 2*(var(--borderSize) + var(--paddingSize)));
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+img {
+    margin: auto;
+    display: block;
+}

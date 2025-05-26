@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Robots & Recipes
+  {{ page.title }} | Robots & Recipes
 {% endblock title %}
 
 {% block content %}
 <main>
-  {{ section.content | safe }}
+  <h2>
+    {{ page.title }}
+  </h2>
+
+  {{ page.content | safe }}
 </main>
 {% endblock content %}
