@@ -1,10 +1,10 @@
 <nav>
-  {% set root = get_section(path="_index.md") %}
+  {% set root = get_section(path="_index.md") -%}
   <a href="{{ root.permalink }}">Home</a>
-  {% for sub in root.subsections %}
-  {% set subsect = get_section(path=sub) %}
-  <a href="{{ subsect.permalink }}">{{ subsect.title }}</a>
-  {% endfor %}
+  {% for sub in root.subsections -%}
+    {% set subsect = get_section(path=sub) -%}
+    <a href="{{ subsect.permalink }}">{{ subsect.title }}</a>
+  {% endfor -%}
 
   <hr>
 </nav>

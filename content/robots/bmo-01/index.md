@@ -10,4 +10,13 @@ I am building a mobile robot with three omnidirectional wheels to enable it to d
 
 My first version consisted of a Raspberry Pi 4 communicating with a Raspberry Pi Pico through UART, which in turn controlled the speed of three brushed DC motors using the [Cytron MD10C motor drivers](https://www.cytron.io/p-10amp-5v-30v-dc-motor-driver) in sign-magnitude PWM mode. I designed a PCB to help with routing the connections between the Pico, motor drivers, motors, and encoders. More details on that can be found [here](@/robots/bmo-01/pico-board.md)
 
-{{ image(path="/images/robot-rev1-cad.png", scale=0.5, title="3D CAD model of the robot") }}
+{{
+    insert_images(
+        op="fit_height",
+        height=500,
+        images=[
+            ["/images/robot-rev1-cad.jpg", "3D CAD model of the robot"],
+        ]
+    )
+}}
+

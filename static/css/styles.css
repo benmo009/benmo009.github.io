@@ -28,7 +28,15 @@ main {
     padding: 20px;
 }
 
-img {
-    margin: auto;
-    display: block;
+.image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
