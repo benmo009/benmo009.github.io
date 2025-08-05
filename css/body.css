@@ -1,0 +1,45 @@
+html {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: #8FAA8F;
+}
+
+body {
+    /* Variables */
+    --borderSize: 3px;
+    --paddingSize: 20px;
+
+    /* Flexbox stuff */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+
+    /* Misc. properties */
+    margin: auto;
+    padding: var(--paddingSize);
+    border: var(--borderSize) solid #3e5c3e;
+
+    background-color: darkseagreen;
+    color: black;
+
+    min-width: 1000px;
+    width: 50%;
+    min-height: calc(100dvh - 2*(var(--borderSize) + var(--paddingSize)));
+    text-align: center;
+
+    font-family: sans-serif;
+}
+
+article {
+    flex-grow: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+hr {
+    color: #3e5c3e;
+}

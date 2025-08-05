@@ -1,12 +1,5 @@
 # VS code
 .vscode/
 
-# python virtual environment
-.venv/
-__pycache__/
-
-# windows batch scripts
-*.bat
-
-# build path
-site/
+public/
+*/processed_images/*

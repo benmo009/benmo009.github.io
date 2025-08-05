@@ -1,0 +1,67 @@
+ul.tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0px;
+
+    min-width: 95%;
+}
+
+ul.tiles li {
+    list-style-type: none;
+    border: 2px solid darkolivegreen;
+    min-width: 30%;
+    max-width: 30%;
+    aspect-ratio: 1;
+}
+
+ul.tiles li a {
+    display: block;
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1;
+}
+
+
+
+ul.tiles li a img {
+    object-fit: fill;
+    max-width: 100%;
+    min-width: 100%;
+    aspect-ratio: 1;
+    display: block;
+    text-align: center;
+}
+
+ul.tiles li a:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  min-width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1;
+  
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(200, 200, 200, 0.5);
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay .overlay-text {
+  color: black;
+  font-size: 20px;
+}
